@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./Document_files/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <!-- fontawesome CSS -->
+     <link rel="stylesheet" href="./Document_files/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+     <link rel="stylesheet" href="./Document_files/style.css">
+  </head>
+
+  <body class="container">
+          <div class="wrapper">
+              <!-- <label for="hotel-name">Searching By Name</label> -->
+              <input id="hotel-name" placeholder="Search By Name here..." type="text">
+              <button id="filter-name-btn">Search By Name</button>
+          </div>
+          <div class="alertss">
+            <span class="closebtn" onclick="this.parentElement.style.display=&#39;none&#39;;">×</span> 
+            <strong>Warning!</strong> Indicates a dangerous or potentially negative action.
+          </div>
+      
+      
+
+        <div class="searchDate">  
+            <label for="from">CHECK IN  
+                <input id="from" class="inputStyle" type="date">
+            </label>
+            <label for="to">CHECK OUT
+                <input id="to" class="inputStyle" type="date">
+            </label>
+            <button id="search-btn">Search</button>
+        </div>
+
+    <div class="sorting">
+        <span>
+            Sort By
+        </span>
+           <select id="sort" class="inputStyle" onchange="sortBy()" name="sort">
+                <option selected="">Choose...</option>
+                <option value="name">name</option>
+                <option value="price">price</option>
+                <option value="rate">rate</option>
+          </select>
+    </div>
+    
+    <table class="table table-striped">
+      <tbody><tr class="thead-dark">
+        <th>name</th>
+        <th>price</th>
+        <th>rate</th>
+      </tr>
+      </tbody><tbody class="hotels"></tbody>
+    </table>
+
+
+
+
+    <!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      gggg,defmsfnsfndsfkjsd dfdsfjnsdkf
+    </div>
+  </div>
+</div>
+
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="./Document_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="./Document_files/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="./Document_files/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <!-- own JavaScript -->
+     <script src="./Document_files/js.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

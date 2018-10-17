@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <!-- fontawesome CSS -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="container">
+      <div class="wrapper">
+          <input id='hotel-name'  placeholder="Search By Name here..." type="text">
+          <button id="filter-name-btn">Search By Name</button>
+      </div>
+      <div class="searchDate">  
+          <label for="from">CHECK IN  
+              <input id="from" class="inputStyle" type="date">
+          </label>
+          <label for="to">CHECK OUT
+              <input id="to" class="inputStyle" type="date">
+          </label>
+          <button id="search-btn" >Search</button>
+      </div>
+    <div class="sorting">
+        <span>Sort By</span>
+        <select id="sort"  class="inputStyle" onChange="sortBy()" name="sort">
+          <option selected >Choose...</option>
+          <option value="name">name</option>
+          <option value="price">price</option>
+          <option value="rate">rate</option>
+      </select>
+    </div>
+    <div class="slidecontainer">
+        <div class="priceFilter">Price Filter</div>
+        <input type="range" class="slider">
+    </div>
+    <table class="table table-striped" >
+      <tr class="thead-dark">
+        <th>name</th>
+        <th>price</th>
+        <th>rate</th>
+      </tr>
+      <tbody class="hotels"></tbody>
+    </table>
+
+      <div class="alerts">
+        <span class="closebtn" onclick="this.parentElement.style.opacity='0';">&times</span> 
+        <strong>Warning!</strong>
+        <h4 class="alrtMsg"> Indicates a dangerous or potentially negative action.</h4>
+      </div>
+
+
+      <div>
+        <input type="text" class="test"   placeholder="write  text to speech">
+      </div>
+      <div>
+        <ul class="ul-item">
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+        </ul>
+      </div>
+<div class="generated">
+
+</div>
+      <!-- <div class="test-flex-parent">
+        <h1 class="test-flex-child">hi</h1>
+        <h1 class="test-flex-child">hi</h1>
+        <h1 class="test-flex-child">hi</h1>
+       
+      </div> -->
+
+
+
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"              crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+      <!-- own JavaScript -->
+     <script src = "js.js" ></script>
+     <script scr = "factorial.js" ></script>
+  </body>
+</html>
